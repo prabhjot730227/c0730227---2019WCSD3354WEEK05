@@ -11,7 +11,11 @@ namespace c0730227
         static void Main(string[] args)
         {
             var a = new TestQuestion2();
-            a.PlayingWithForLoops();
+            //a.PlayingWithForLoops();
+
+            var b = new birthday_party();
+            b.setupPartyList();
+            b.printPartyList();
         }
     }
 
@@ -64,7 +68,8 @@ namespace c0730227
         public dog head;
         public dog tail;
         public dog temporary;
-        public void pea()
+        public void setupPartyList()
+
         {
             peanut = new dog("Peanut", "Bichon");
             fifi = new dog("Fifi", "Poodle");
@@ -81,6 +86,18 @@ namespace c0730227
             roy.next_dog = null;
             head = peanut;
             tail = roy;
+        }
+
+        public string printPartyList()
+        {
+            string inviteList = "*-----";
+            temporary = head;
+            while(temporary.next_dog != null)
+            {
+                inviteList += temporary.dog_name + " *-------";
+
+            }
+            return inviteList;
         }
     }
 }
