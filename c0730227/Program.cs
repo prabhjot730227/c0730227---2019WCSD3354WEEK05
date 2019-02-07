@@ -35,6 +35,33 @@ namespace c0730227
         {
             myFavouriteVariable++;
             return true;
+
         }
+    }
+
+    class dog
+    {
+        private dog(string name, string breed)
+        {
+            dog_name = name;
+            dog_breed = breed;
+
+        }
+            public string dog_name;
+            public string dog_breed;
+            public dog next_dog;
+            public dog prev_dog;
+
+    }
+    class birthday_party
+    {
+        public dog peanut;
+        public dog fif;
+        public dog clarence;
+        public dog roy;
+
+        public dog head;
+        public dog tail;
+        public dog temporary;
     }
 }
