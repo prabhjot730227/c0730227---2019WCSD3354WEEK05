@@ -41,10 +41,11 @@ namespace c0730227
 
     class dog
     {
-        private dog(string name, string breed)
+        public dog(string name, string breed )
         {
             dog_name = name;
             dog_breed = breed;
+           
 
         }
             public string dog_name;
@@ -56,12 +57,30 @@ namespace c0730227
     class birthday_party
     {
         public dog peanut;
-        public dog fif;
+        public dog fifi;
         public dog clarence;
         public dog roy;
 
         public dog head;
         public dog tail;
         public dog temporary;
+        public void pea()
+        {
+            peanut = new dog("Peanut", "Bichon");
+            fifi = new dog("Fifi", "Poodle");
+            clarence = new dog("Clarence", "German Sheppard");
+            roy = new dog("Roy", "Beagle");
+
+            peanut.prev_dog = null;
+            peanut.next_dog = fifi;
+            fifi.prev_dog = peanut;
+            fifi.next_dog = clarence;
+            clarence.prev_dog = fifi;
+            clarence.next_dog = roy;
+            roy.prev_dog = clarence;
+            roy.next_dog = null;
+            head = peanut;
+            tail = roy;
+        }
     }
 }
